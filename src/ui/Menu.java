@@ -2,7 +2,13 @@ package src.ui;
 
 import java.util.Scanner;
 
+import src.main.Board;
+import src.main.Game;
+
 public class Menu {
+
+    Board board = new Board();
+    Game game = new Game();
 
     public void displayMenu() {
         System.out.println("Bienvenido al juego de Ajedrez");
@@ -18,8 +24,12 @@ public class Menu {
 
         switch (choice) {
             case 1:
-                System.out.println("Has seleccionado el Modo Local.");
+                System.out.println("Has seleccionado el Modo Local.\n");
                 // Aquí iría el código para iniciar una partida local
+                game.displayPlayers();
+                board.showBoard();
+
+
                 break;
             case 2:
                 System.out.println("Has seleccionado el Modo Online.");
